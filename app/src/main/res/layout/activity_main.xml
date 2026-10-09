@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000"
+    android:padding="10dp">
+
+    <!-- answer — big green at top -->
+    <TextView
+        android:id="@+id/tvAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
+        android:text="answer appears here"
+        android:textColor="#00FF88"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="#0A1A0A" />
+
+    <!-- preview -->
+    <ImageView
+        android:id="@+id/ivPreview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:scaleType="fitCenter"
+        android:background="#111111"
+        android:layout_marginTop="6dp" />
+
+    <!-- status -->
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="● enter phone A details below"
+        android:textColor="#FFFF00"
+        android:textSize="11sp"
+        android:fontFamily="monospace"
+        android:padding="6dp" />
+
+    <!-- IP + ADB port row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp">
+
+        <EditText
+            android:id="@+id/etIP"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="2"
+            android:hint="Phone A IP  e.g. 192.168.1.5"
+            android:textColorHint="#555"
+            android:textColor="#FFFFFF"
+            android:background="#1A1A1A"
+            android:padding="8dp"
+            android:textSize="12sp"
+            android:inputType="text"
+            android:layout_marginEnd="4dp" />
+
+        <EditText
+            android:id="@+id/etPort"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:hint="ADB port"
+            android:textColorHint="#555"
+            android:textColor="#FFFFFF"
+            android:background="#1A1A1A"
+            android:padding="8dp"
+            android:textSize="12sp"
+            android:inputType="number" />
+
+    </LinearLayout>
+
+    <!-- pair port + pair code row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp">
+
+        <EditText
+            android:id="@+id/etPairPort"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:hint="Pair port"
+            android:textColorHint="#555"
+            android:textColor="#FFFFFF"
+            android:background="#1A1A1A"
+            android:padding="8dp"
+            android:textSize="12sp"
+            android:inputType="number"
+            android:layout_marginEnd="4dp" />
+
+        <EditText
+            android:id="@+id/etPairCode"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:hint="6-digit pair code"
+            android:textColorHint="#555"
+            android:textColor="#FFFFFF"
+            android:background="#1A1A1A"
+            android:padding="8dp"
+            android:textSize="12sp"
+            android:inputType="number" />
+
+    </LinearLayout>
+
+    <!-- buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="6dp">
+
+        <Button
+            android:id="@+id/btnPair"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:text="⚡ Pair"
+            android:backgroundTint="#0088FF"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginEnd="4dp" />
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:text="▶ Start"
+            android:backgroundTint="#00FF88"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_marginEnd="4dp" />
+
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:text="■ Stop"
+            android:backgroundTint="#333333"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+</LinearLayout>
